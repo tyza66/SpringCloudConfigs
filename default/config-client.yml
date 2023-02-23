@@ -1,0 +1,32 @@
+spring:
+  profile: 
+    active: dev
+
+---
+server:
+  port: 8080
+
+spring:
+  profile: dev
+  application:
+    name: SpringCloud1
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+
+
+---
+server:
+  port: 8081
+
+spring:
+  profile: test
+  application:
+    name: SpringCloud2
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
